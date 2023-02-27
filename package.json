@@ -1,0 +1,24 @@
+{
+  "name": "weather-application",
+  "version": "1.0.0",
+  "description": "Weather Application (MERN)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonkianhonting/Weather-Application.git"
+  },
+  "author": "Jason Kian Hon Ting",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonkianhonting/Weather-Application/issues"
+  },
+  "homepage": "https://github.com/jasonkianhonting/Weather-Application#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1"
+  }
+}
