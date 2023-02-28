@@ -3,8 +3,11 @@
 	"version": "1.0.0",
 	"description": "Weather Application (MERN)",
 	"main": "index.js",
+	"jest": {
+		"verbose": true
+	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "jest",
 		"start": "nodemon express-server/index.js"
 	},
 	"repository": {
@@ -24,5 +27,9 @@
 		"helmet": "^6.0.1",
 		"mongodb": "^5.1.0",
 		"nodemon": "^2.0.20"
+	},
+	"devDependencies": {
+		"jest": "^29.4.3",
+		"supertest": "^6.3.3"
 	}
 }

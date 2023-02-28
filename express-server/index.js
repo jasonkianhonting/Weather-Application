@@ -65,6 +65,4 @@ app.use((req, res, next) => {
 	res.status(500).send(error);
 });
 
-app.listen(port, () => {
-	console.log(`The server is currently running in: ${port}`);
-});
+module.exports = app.listen(port);

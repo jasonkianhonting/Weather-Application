@@ -10,7 +10,6 @@ async function connectDatabase() {
 	const client = new MongoClient(client_url);
 	try {
 		// Connect to the MongoDB cluster
-		// let connectClient = await client.connect();
 		await client.connect();
 	} catch (e) {
 		console.error(e);
