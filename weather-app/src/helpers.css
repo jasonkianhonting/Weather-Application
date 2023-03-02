@@ -1,0 +1,21 @@
+.card {
+	align-self: center;
+	width: 100vh;
+	height: 60vh;
+	padding: 20px;
+	box-shadow: 7px 10px 5px 5px grey;
+}
+
+.card-information {
+	padding: 10px;
+}
+
+.card-img {
+	width: 120px;
+	align-self: center;
+}
+
+.card-title {
+	padding-top: 10px;
+	justify-content: center;
+}

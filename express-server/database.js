@@ -65,4 +65,31 @@ async function queryDatabase(city, countrycode) {
 		return await result;
 	}
 }
-module.exports = { queryDatabase, getAllData };
+
+// This function is used to query the database to match the data required by the user by inputting the name of the city
+async function queryCity(city) {
+	const client = new MongoClient(client_url);
+	let result = "";
+	try {
+		if (connectDatabase()) {
+			let gatherData = await client
+				.db(database_name)
+				.collection(database_collection)
+				.aggregate([
+					{
+						$match: {
+							"city.name": `${city}`,
+						},
+					},
+				])
+				.toArray();
+			result = gatherData;
+		}
+	} catch (e) {
+		console.error(e);
+	} finally {
+		client.close();
+		return await result;
+	}
+}
+module.exports = { queryDatabase, getAllData, queryCity };

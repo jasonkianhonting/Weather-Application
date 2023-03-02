@@ -1,16 +1,11 @@
 const { port } = require("./config");
-const { queryDatabase, getAllData } = require("./database");
+const { queryDatabase, getAllData, queryCity } = require("./database");
 const { uppercaseCity, uppercaseCountryCode } = require("./helpers");
 const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const app = express();
 
-app.use(
-	cors({
-		origin: "*",
-	})
-);
 app.use(helmet());
 
 // Default route to get all weather data although it is capped to 50 results for performance purposes
@@ -34,7 +29,22 @@ app.get("/:country/:countrycode", async (req, res) => {
 		res.status(400).send({
 			error: true,
 			message:
-				"Please make sure your country and country code are valid. Refer to city-list.json for references",
+				"Please make sure your city and country code are valid. Refer to city-list.json for references",
+		});
+	} else {
+		res.status(200).send({ result });
+	}
+});
+
+// Route to get weather data from specific city
+app.get("/:country", async (req, res) => {
+	let country = uppercaseCity(req.params.country);
+	let result = await queryCity(country);
+	if (result.length === 0 || result === null || result === "") {
+		res.status(400).send({
+			error: true,
+			message:
+				"Please make sure the name of the city is valid. Refer to city-list.json for references",
 		});
 	} else {
 		res.status(200).send({ result });

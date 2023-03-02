@@ -18,7 +18,7 @@ describe("API Endpoint Testing", () => {
 		const res = await request.get("/london/us");
 		expect(res.status).toBe(400);
 		expect(res.body.message).toBe(
-			"Please make sure your country and country code are valid. Refer to city-list.json for references"
+			"Please make sure your city and country code are valid. Refer to city-list.json for references"
 		);
 	});
 
@@ -30,8 +30,10 @@ describe("API Endpoint Testing", () => {
 
 	it("Check to see if special characters can be used in the URL", async () => {
 		const res = await request.get("/@#$@/&^*");
-		expect(res.status).toBe(404);
-		expect(res.body.message).toBe("The following URL does not exists");
+		expect(res.status).toBe(400);
+		expect(res.body.message).toBe(
+			"Please make sure the name of the city is valid. Refer to city-list.json for references"
+		);
 	});
 });
 

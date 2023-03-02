@@ -1,0 +1,22 @@
+* {
+	background-color: #8a6649;
+}
+
+.App {
+	display: flex;
+	justify-content: center;
+	padding: 220px;
+}
+
+div#form {
+	border-width: 100px;
+	background-color: aliceblue;
+}
+
+#loadingBar {
+	padding: 10px;
+}
+
+#errorMessage {
+	color: red;
+}
