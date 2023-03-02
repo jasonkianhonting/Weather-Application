@@ -4,7 +4,7 @@ Hello there, this is a project that I've been inspired to do as there are a lack
 
 I've done two things here which are creating an API and also a frontend project to interact with the API. Below shows the command to run it together at the same time with literal just a line on the command line.
 
-This project was also inspired due to the constant need to check UV index to contemplate if I should put on sunscreen or not
+This project was also inspired due to the constant need to check UV index to contemplate if I should put on sunscreen or not :sweat_smile:
 
 Tech Stack: MERN (MongoDB, Express, React, Node)
 
@@ -36,3 +36,15 @@ Simply run:
 
 - Improve the front end design (it is not exactly aesthetically pleasing at the moment (not to my standard at least)
 - Add more test cases to cover a wider range of scenarios such as more edge cases and more corner cases
+
+## Screenshots
+![image](https://user-images.githubusercontent.com/100106305/222348780-37d30f8b-0f5e-4061-8e64-87c486aac1fd.png)
+
+### When adding the name of the city and the country code (/london/gb)
+![image](https://user-images.githubusercontent.com/100106305/222349089-ebbffb62-a26c-4bae-85f3-8ebc80770461.png)
+
+### When given an invalid name of the city and an invalid country code (/sdsds/dsds)
+![image](https://user-images.githubusercontent.com/100106305/222349326-7f077874-22dd-4715-aee1-bb2633f24b3d.png)
+
+
+
